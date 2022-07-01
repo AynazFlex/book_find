@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import style from "./App.module.css"
+import Search from "./components/SearchContainer/Search";
+import Books from "./components/BooksContainer/Books"
+import { useSelector } from "react-redux";
+import Preloader from "./components/PreloaderContainer/Preloader";
+import OpenBook from "./components/openBookContainer/OpenBook";
 
 function App() {
+  
+  const isFetch = useSelector(state => state.books.fetching);
+  const isOpen = useSelector(state => state.books.isOpen);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.wrapper}>
+      <header className={style.title}>Search for books</header>
+      <Search />
+      {isFetch ? <Preloader /> : isOpen ? <OpenBook /> : <Books />}
     </div>
   );
 }
