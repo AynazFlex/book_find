@@ -7,7 +7,6 @@ import parse from "html-react-parser";
 const OpenBook = (props) => {
   const data = useSelector((state) => state.books.openBook.volumeInfo);
   const dispatch = useDispatch();
-  console.log(data);
 
   return (
     <div className={style.book_container}>
@@ -19,6 +18,7 @@ const OpenBook = (props) => {
               ? data.imageLinks.thumbnail
               : "http://photos2.fotosearch.com/bthumb/CSP/CSP991/3d-red-book-standing-stock-illustration__k12250768.jpg"
           }
+          alt="book"
         />
       </div>
       <div className={style.info_block}>

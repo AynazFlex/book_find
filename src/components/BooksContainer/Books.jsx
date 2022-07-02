@@ -21,7 +21,7 @@ const Books = (props) => {
             key={i}
             title={item.volumeInfo.title || ""}
             img={item.volumeInfo.imageLinks || ""}
-            category={item.volumeInfo.categories && item.volumeInfo.categories[0] || ""}
+            category={item.volumeInfo.categories ? item.volumeInfo.categories[0] : ""}
             authors={item.volumeInfo.authors || ""}
             id={item.id}
           />

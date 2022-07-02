@@ -17,6 +17,7 @@ const Book = ({ img, category, title, authors, id }) => {
             ? img.thumbnail
             : "http://photos2.fotosearch.com/bthumb/CSP/CSP991/3d-red-book-standing-stock-illustration__k12250768.jpg"
         }
+        alt="book"
       />
       <div className={style.info}>
         <div onClick={() => openBook(id)} className={style.title}>
