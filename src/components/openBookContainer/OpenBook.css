@@ -1,11 +1,11 @@
-.book_container {
+.openBook_container {
     flex-grow: 1;
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.image_block {
+.openBook_image_block {
     flex-grow: 1;
     padding: 20px;
     box-sizing: border-box;
@@ -13,42 +13,42 @@
     align-self: flex-start;
 }
 
-.image {
+.openBook_image {
     display: block;
     margin: 0 auto;
 }
 
-.categories {
+.openBook_categories {
     font-size: 12px;
     color: rgb(154, 154, 154);
     text-decoration-line: underline;
     margin: 10px 0;
 }
 
-.title {
+.openBook_title {
     font-size: 20px;
     font-weight: bold;
     margin: 20px 0;
 }
 
-.authors {
+.openBook_authors {
     font-size: 14px;
     color: rgb(90, 90, 90);
     margin: 10px 0;
 }
 
-.info_block {
+.openBook_info_block {
     align-self: flex-start;
 }
 
-.description {
+.openBook_description {
     padding: 10px;
     font-style: italic;
     font-size: 14px;
     background-color: rgb(211, 211, 211);
 }
 
-.button {
+.openBook_button {
     outline: none;
     background-color: transparent;
     color: white;
@@ -59,13 +59,13 @@
     border: none;
 }
 
-.button:hover {
+.openBook_button:hover {
     background-color: rgb(211, 211, 211);
     color: black;
 }
 
 @media only screen and (max-width: 700px) {
-    .book_container {
+    .openBook_container {
         flex-wrap: wrap;
     }
 }

@@ -1,19 +1,20 @@
-import React from "react";
-import style from "./App.module.css"
+import React, {FC} from "react";
 import Search from "./components/SearchContainer/Search";
 import Books from "./components/BooksContainer/Books"
 import { useSelector } from "react-redux";
 import Preloader from "./components/PreloaderContainer/Preloader";
 import OpenBook from "./components/openBookContainer/OpenBook";
+import { RootState } from "./store/store"
+import "./App.css"
 
-function App() {
+const App: FC<{}> = () => {
   
-  const isFetch = useSelector(state => state.books.fetching);
-  const isOpen = useSelector(state => state.books.isOpen);
+  const isFetch: boolean = useSelector((state: RootState) => state.books.fetching);
+  const isOpen: boolean = useSelector((state: RootState) => state.books.isOpen);
 
   return (
-    <div className={style.wrapper}>
-      <header className={style.title}>Search for books</header>
+    <div className="app-wrapper">
+      <header className="app-title">Search for books</header>
       <Search />
       {isFetch ? <Preloader /> : isOpen ? <OpenBook /> : <Books />}
     </div>

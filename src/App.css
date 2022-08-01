@@ -1,4 +1,4 @@
-.wrapper {
+.app-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -7,7 +7,7 @@
     min-height: 100vh;
 }
 
-.title {
+.app-title {
     text-align: center;
     font-size: 30px;
     margin-top: 20px;

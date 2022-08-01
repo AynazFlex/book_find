@@ -1,9 +1,9 @@
-.search_panel {
+.search-panel {
     display: flex;
     padding: 4px 0;
 }
 
-.search_input {
+.search-input {
     display: inline-block;
     width: 100%;
     padding: 8px 16px;
@@ -12,7 +12,7 @@
     border: 1px solid black;
 }
 
-.submit_button {
+.search-submit_button {
     border: none;
     outline: none;
     background-color: black;
@@ -21,7 +21,7 @@
     cursor: pointer;
 }
 
-.select {
+.search-select {
     padding: 4px 8px;
     border: 1px solid black;
     outline: none;
@@ -29,14 +29,14 @@
     cursor: pointer;
 }
 
-.lable {
+.search-lable {
     display: inline-block;
     margin: 0 6px 6px 0;
     font-size: 14px;
     font-weight: bold;
 }
 
-.select_panel {
+.search-select_panel {
     display: flex;
     gap: 10px;
     justify-content: center;
